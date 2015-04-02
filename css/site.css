@@ -271,10 +271,6 @@ input::-moz-focus-inner {
   background: #002D72;
 }
 
-.u-disclaimer {
-    font-size:.8em;
-}
-
 /* QUOTES */
 
 blockquote,
@@ -644,10 +640,6 @@ sub {
     margin: 0; padding: 0;
     list-style: none;
 }
-
-.sidebar_list {
-
-}
 .sidebar_list .author {
     font-family: "Avenir Next W01", Arial, sans-serif;
     font-weight: 400;
@@ -790,6 +782,12 @@ sub {
 .more-repos li {
     margin: 0;
 }
+.work-at-cfpb {
+    margin-bottom: 3em;
+}
+.job-half {
+    margin-bottom: 1em;
+}
 .footer {
     padding: 2em 0;
     border-top: 2px solid #BABBBD;
@@ -831,9 +829,6 @@ sub {
     font-size: 1.125em;
     line-height: 1;
     font-weight: 500;
-}
-.footer p {
-
 }
 
 
@@ -897,12 +892,6 @@ sub {
         margin: 1em 0;
         float: right;
     }
-/*    .header h1 {
-        margin-top: 0.75em;
-        float: left;
-        font-size: 2.125em;
-    }*/
-
     .learn-more_item {
         float: left;
         margin-left: 2em;
@@ -972,26 +961,21 @@ sub {
         margin: 0 -0.26em 1em 0;
         vertical-align: top;
     }
-
     .intro {
         width: 66%;
     }
-
     .featured-entries,
     .repos,
     .entry__single {
         width: 73%;
     }
-
     .hero section {
         padding: 2em 0;
     }
-
     .sidebar {
         width: 23%;
         margin-left: 4%;
     }
-
     .hero .sidebar {
         width: 30%;
         margin-left: 3%;
@@ -1003,39 +987,6 @@ sub {
     .hero .sidebar_head {
         line-height: 2.333333333; /* 42/18 */
     }
-
-    /*.content-body {
-        display: table;
-        width: 100%;
-        margin: 0;
-    }
-    .entry__single,
-    .sidebar__single {
-        display: table-cell;
-        height: auto;
-        padding: 2em 2em 2em 5%;
-        border: none;
-        margin: 0;
-    }
-    .entry__single {
-        width: 75%;
-    }
-    .sidebar__single {
-        width: 25%;
-        padding: 2em 5% 2em 2em;
-        background: #F8F8F8;
-    }
-    .entry__single_wrap {
-        width: 100%;
-        max-width: 868px;
-        float: right;
-    }
-    .sidebar__single_wrap {
-        width: 100%;
-        max-width: 268px;
-        float: left;
-    }*/
-
     .content {
         overflow: hidden;
     }
@@ -1084,21 +1035,9 @@ sub {
 
 /* LANDSCAPE TABLET/NETBOOK/LAPTOP (1024px) */
 @media only screen and (min-width: 64em) {
-    /*.content {
-        overflow: hidden;
-    }*/
-    /*.wrap {
-        max-width: 960px;
-    }*/
-
     .hero {
         position: relative;
     }
-
-/*    .intro h1 {
-        font-size: 2.375em;
-    }*/
-
     .featured-project {
         width: 33.333333333%;
     }
@@ -1117,9 +1056,6 @@ sub {
     .wrap {
         max-width: 1200px;
     }
-/*    .intro h1 {
-        font-size: 2.625em;
-    }*/
     .repo {
         width: 31%;
         margin-left: 3.5%;
