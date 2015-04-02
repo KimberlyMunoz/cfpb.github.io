@@ -209,6 +209,71 @@ input::-moz-focus-inner {
     border: 0;
 }
 
+.signup-form label {
+    font-size: .94em;
+    margin: 0 0 20px 0;
+}
+
+.signup-form .signup_firstname,
+.signup-form .signup_lastname {
+    width: 40%;
+    display: inline-block;
+}
+
+.signup-form .signup_lastname {
+    margin-left: 5%;
+}
+
+.signup-form .signup_email {
+    width: 85%;
+    display: inline-block;
+}
+
+.signup-form input[type=text],
+.signup-form input[type=email] {
+    display: block;
+    width:100%;
+    max-width: 500px;
+    border: 0;
+    border-radius: 0;
+    padding: 6px;
+    font-size: 1em;
+    box-shadow: inset 2px 1px 2px -3px #aaa;
+}
+
+.work-at-cfpb .signup-form input[type=text],
+.work-at-cfpb.signup-form input[type=email] {
+    border: 1px solid #75787b;
+}
+
+.signup-form .btn {
+    display: inline-block;
+    font-family: "Avenir Next", Arial, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.875em;
+    border: 0;
+    color: #FFFFFF;
+    background: #75787B;
+    border-radius: 4px;
+    padding: 7px 30px;
+    margin: 10px 15px 10px 0;
+}
+
+.signup-form .btn-primary {
+  color: #FFFFFF;
+  background: #0072CE;
+}
+
+.signup-form .btn-primary:hover,
+.signup-form .btn-primary:focus {
+  color: #FFFFFF;
+  background: #002D72;
+}
+
+.u-disclaimer {
+    font-size:.8em;
+}
 
 /* QUOTES */
 
@@ -581,7 +646,7 @@ sub {
 }
 
 .sidebar_list {
-    
+
 }
 .sidebar_list .author {
     font-family: "Avenir Next W01", Arial, sans-serif;
@@ -700,7 +765,7 @@ sub {
 }
 
 .entry_read-more-link {
-    margin-bottom: 2em;
+    margin-bottom: 2em
 }
 
 .repos {
@@ -881,13 +946,23 @@ sub {
     .view-all-repos {
         margin-left: 1em;
     }
+    .job-half {
+        display: inline-block;
+        width: 47%;
+        margin: 0 0 0 0;
+        vertical-align: middle;
+    }
+    .job-half:nth-child(2) {
+        margin-left: 5%;
+    }
 }
 
 /* TABLET/NETBOOK (768px) */
-@media only screen and (min-width: 48em) { 
+@media only screen and (min-width: 48em) {
     .intro,
     .featured-entries,
     .repos,
+    .jobs,
     .entry__single,
     .sidebar,
     .footer-links,
@@ -897,7 +972,11 @@ sub {
         margin: 0 -0.26em 1em 0;
         vertical-align: top;
     }
-    .intro,
+
+    .intro {
+        width: 66%;
+    }
+
     .featured-entries,
     .repos,
     .entry__single {
@@ -907,13 +986,15 @@ sub {
     .hero section {
         padding: 2em 0;
     }
-/*    .intro h1 {
-        font-size: 1.75em;
-    }*/
-    
+
     .sidebar {
         width: 23%;
         margin-left: 4%;
+    }
+
+    .hero .sidebar {
+        width: 30%;
+        margin-left: 3%;
     }
     .sidebar_head {
         line-height: 1.77777777777778; /* 32/18 - aligns baseline with article title */
@@ -1002,7 +1083,7 @@ sub {
 }
 
 /* LANDSCAPE TABLET/NETBOOK/LAPTOP (1024px) */
-@media only screen and (min-width: 64em) { 
+@media only screen and (min-width: 64em) {
     /*.content {
         overflow: hidden;
     }*/
@@ -1017,7 +1098,7 @@ sub {
 /*    .intro h1 {
         font-size: 2.375em;
     }*/
-    
+
     .featured-project {
         width: 33.333333333%;
     }
@@ -1032,7 +1113,7 @@ sub {
 }
 
 /* DESKTOP (1200px) */
-@media only screen and (min-width: 75em) { 
+@media only screen and (min-width: 75em) {
     .wrap {
         max-width: 1200px;
     }
@@ -1052,7 +1133,7 @@ sub {
 }
 
 /* WIDESCREEN */
-@media only screen and (min-width: 87.5em) { 
+@media only screen and (min-width: 87.5em) {
     /*body { font-size: 1.125em; }*/
 }
 
@@ -1085,7 +1166,7 @@ ol ol ol > li {
 ol ol ol ol > li {
     list-style-type: lower-roman;
 }
-    
+
 /* PRINT */
 @media print {
   * {background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important} /* Black prints faster */

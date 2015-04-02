@@ -27,35 +27,26 @@ title: Home
                         </ul>
                     </section>
 
-                    <section class="sidebar off-the-press">
-                        <h2 class="sidebar_head">Off the press</h2>
-                        <ul class="sidebar_list nav-list">
-                        {% for post in site.posts limit:2 %}
-                            <li class="sidebar_list_item">
-                                <h3 class="sidebar_list_item_head">
-                                {% if post.external-url %}
-                                    <a href="{{ post.external-url }}">
-                                {% else %}
-                                    <a href="{{ post.url | remove_first:'/' }}/">
-                                {% endif %}
-                                        {{ post.title }}
-                                    </a>
-                                </h3>
-                                
-                                <div class="sidebar_list_item_meta entry_meta">
-                                    {% if post.author %}
-                                    By <span class="author">{{ post.author }}</span> &ndash;
-                                    {% endif %}
+                    <section class="sidebar">
+                        <h2 class="sidebar_head" id="job-signup">Work with us</h2>
+                        <p>Fill out the form and we'll let you know about job openings.</p>
+                        <form action="https://docs.google.com/forms/d/1t5S8o19dpesTewm7oGn3EGSkMEU3_qJ6KV-vxQkbdjo/formResponse" method="POST" id="ss-form" target="_self" onsubmit="" class="signup-form">
+                            <label class="signup_firstname">
+                                First Name
+                                <input type="text" name="entry.581676839" value="" id="entry_581676839" dir="auto" aria-label="First Name  ">
+                            </label>
+                            <label class="signup_lastname">
+                                Last Name
+                                <input type="text" name="entry.1240980749" value="" id="entry_1240980749" dir="auto" aria-label="Last Name  ">
+                            </label>
+                            <label class="signup_email">
+                                Email Address
+                                <input type="text" name="entry.872281444" value="" id="entry_872281444" dir="auto" aria-label="Email Address  ">
+                            </label>
 
-                                    {% if post.date %}
-                                    <time datetime="{{ post.date | date: '%b %d, %Y' }}">
-                                        {{ post.date | date: '%b %d, %Y' }}
-                                    </time>
-                                    {% endif %}
-                                </div>
-                            </li>
-                        {% endfor %}
-                        </ul>
+                            <input type="submit" name="submit" value="Sign Up" id="ss-submit" class="jfk-button jfk-button-action btn btn-primary">
+                            <a href="#privacy" class="u-disclaimer">Privacy act statement</a>
+                        </form>
                     </section>
                 </div>
             </section> <!-- /.hero -->
@@ -121,11 +112,11 @@ title: Home
                         {% if post.tagline %}
                         <p class="entry_tagline">{{ post.tagline }}</p>
                         {% endif %}
-                        
+
                         {% if post.excerpt %}
                         <p class="entry_description">{{ post.excerpt | markdownify }}</p>
                         {% endif %}
-                        
+
                         <div class="entry_meta">
                             {% if post.author %}
                             By <span class="author">{{ post.author }}</span> &ndash;
@@ -136,7 +127,7 @@ title: Home
                                 {{ post.date | date: '%b %d, %Y' }}
                             </time>
                             {% endif %}
-                            
+
                             {% comment %}
                                 {% if post.tags %}
                                 <div class="tags cf">
@@ -247,5 +238,43 @@ title: Home
                         View all repositories <i class="icon-external-link"></i>
                     </a>
                 </section>
-
+            </section>
+            <section class="work-at-cfpb wrap">
+                <h2 id="job-signup" class="section-head"><i class="icon-web"></i> Work with us</h2>
+                <section class="jobs">
+                <div class="job-half">
+                <p>
+                    Our mission demands smart, usable, and reliable technology.
+                    Come serve consumers by helping us design and build it.
+                </p><p>
+                    Learn more about the work we do at our page for the
+                    <a href="http://www.consumerfinance.gov/jobs/technology-innovation-fellows/">Technology &amp; Innovation Fellowship</a><i class="icon-external-link"></i>.
+                </p><p>
+                    Share your contact information and
+                    we'll contact you with software development opportunities throughout the year.
+                </p>
+                </div>
+                <div class="job-half">
+                    <h2 class="sidebar_head">Sign up for job announcements</h2>
+                    <form action="https://docs.google.com/forms/d/1t5S8o19dpesTewm7oGn3EGSkMEU3_qJ6KV-vxQkbdjo/formResponse" method="POST" id="ss-form" target="_self" onsubmit="" class="signup-form">
+                        <label class="signup_firstname">
+                            First Name
+                            <input type="text" name="entry.581676839" value="" id="entry_581676839" dir="auto" aria-label="First Name  ">
+                            </label>
+                        <label class="signup_lastname">
+                            Last Name
+                            <input type="text" name="entry.1240980749" value="" id="entry_1240980749" dir="auto" aria-label="Last Name  ">
+                        </label><br/>
+                        <label class="signup_email">
+                            Email Address
+                            <input type="text" name="entry.872281444" value="" id="entry_872281444" dir="auto" aria-label="Email Address  ">
+                        </label><br/>
+                        <input type="submit" name="submit" value="Sign Up" id="ss-submit" class="jfk-button jfk-button-action btn btn-primary">
+                    </form>
+                </div>
+                </section>
+                <div>
+                    <h4 id="privacy">Privacy Act Statement</h4>
+                    <p>The information you provide will only be used to allow the Consumer Financial Protection Bureau to respond to your request for fellowship updates. This information may be shared with contractors, agents, and others authorized by the CFPB to receive this information in the normal course of business in order to provide you with the fellowship updates. This collection of information is authorized by 12 U.S.C. § 5492.</p>
+                </div>
             </section>
